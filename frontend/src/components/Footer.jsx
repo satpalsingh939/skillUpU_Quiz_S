@@ -12,7 +12,9 @@ export default function Footer() {
       </h2>
       <p className="text-gray-400 text-sm max-w-xs">
         Test your Knowledge.Practice quizzes, track your progress, earn certificates, and get
-            ready for next level.🎓
+            ready for next level.🎓 <br/> 
+            satpalsinghjadhav5@gmail.com <br/>
+            7224925007 [Indore MP]
       </p>
     </div>
 
@@ -100,13 +102,13 @@ export default function Footer() {
         /> */}
       </div>
       <div className="flex gap-4 text-lg mt-3 justify-center md:justify-start lg:ml-7 md:ml-8">
-        <a href="#" className="hover:text-teal-400">
+        <a href="https://github.com/satpalsingh939" className="hover:text-teal-400">
           <FaGithub />
         </a>
-        <a href="#" className="hover:text-teal-400">
+        <a href="https://www.instagram.com/satpal_singh_939?igsh=MTRkbnkzM2NvZ2poMA==" className="hover:text-teal-400">
           <FaInstagram />
         </a>
-        <a href="#" className="hover:text-teal-400">
+        <a href="https://www.linkedin.com/in/satpal-singh-jadhav-ab2875295r" className="hover:text-teal-400">
           <FaLinkedin />
         </a>
       </div>

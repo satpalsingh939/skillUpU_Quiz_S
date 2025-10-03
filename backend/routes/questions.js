@@ -1,29 +1,4 @@
 
-// const express = require('express');
-// const router = express.Router();
-// const fs = require('fs');
-// const path = require('path');
-// const auth = require('./authMiddleware');
-
-// router.get('/', auth, (req, res) => {
-//   try {
-//     const domain = (req.query.domain || 'javascript').toLowerCase();
-//     const filePath = path.join(__dirname, '..', 'data', 'domains', `${domain}.json`);
-
-//     if (!fs.existsSync(filePath)) return res.status(404).json({ msg: 'Domain not found' });
-
-//     const questions = JSON.parse(fs.readFileSync(filePath, 'utf8'));
-//     res.json(questions);
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).json({ msg: 'Server error' });
-//   }
-// });
-
-// module.exports = router;
-
-
-
 const express = require("express");
 const router = express.Router();
 const Question = require("../models/Question");

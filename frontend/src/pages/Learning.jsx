@@ -6,39 +6,39 @@ export default function LearningResources() {
   const resources = [
     {
       name: "React Basics",
-      type: "Tutorial",
+      type: "react Official Docs",
       desc: "Learn the fundamentals of React components, props, and state.",
       link: "https://reactjs.org/docs/getting-started.html",
     },
     {
       name: "JavaScript ES6",
-      type: "Guide",
+      type: "W3Schools Tutorial",
       desc: "Understand ES6 features like arrow functions, promises, and modules.",
       link: "https://www.w3schools.com/js/js_es6.asp",
     },
     {
       name: "Data Structures",
-      type: "eBook",
+      type: "GFG Article",
       desc: "Detailed explanations of arrays, stacks, queues, and trees.",
       link: "https://www.geeksforgeeks.org/data-structures/",
     },
     {
       name: "Algorithms Practice",
-      type: "Problem Set",
+      type: "LeetCode",
       desc: "Solve challenges and improve problem-solving skills.",
       link: "https://leetcode.com/problemset/all/",
     },
     {
       name: "Quiz Strategies",
-      type: "PDF",
-      desc: "Smart techniques to improve accuracy and speed in quizzes.",
-      link: "#",
+      type: "Growth Article",
+      desc: "The Art of Quiz Design: 20 Tips for Engaging Questions.",
+      link: "https://www.growthengineering.co.uk/learning-quizzes/",
     },
     {
       name: "UI/UX Design Tips",
-      type: "Article",
-      desc: "Best practices for creating visually appealing UI/UX.",
-      link: "https://www.freecodecamp.org/news/ui-ux-design-best-practices/",
+      type: "Tips",
+      desc: "30 Practical Tips for Effective User Interface Design.",
+      link: "https://uxplanet.org/30-practical-tips-for-effective-user-interface-design-59e1e46ac370",
     },
   ];
 
@@ -101,16 +101,16 @@ export default function LearningResources() {
           <li>
             📺 Watch tutorials on{" "}
             <a
-              href="https://www.youtube.com/c/Freecodecamp"
+              href="https://youtube.com/playlist?list=PLu0W_9lII9agq5TrH9XLIKQvv0iaF2X3w&si=DaXAv6Sa_PjKweC_"
               target="_blank"
               rel="noreferrer"
               className="text-cyan-500 hover:underline"
             >
-              FreeCodeCamp
+              Code With Harry
             </a>
           </li>
           <li>
-            📖 Read docs on{" "}
+            📖 Read notes on{" "}
             <a
               href="https://developer.mozilla.org/en-US/"
               target="_blank"
@@ -121,7 +121,7 @@ export default function LearningResources() {
             </a>
           </li>
           <li>
-            📝 Practice coding on{" "}
+            📝 Practice coding [DSA] on{" "}
             <a
               href="https://leetcode.com/"
               target="_blank"
@@ -143,7 +143,7 @@ export default function LearningResources() {
             </a>
           </li>
           <li>
-            ⚡ Practice competitive programming on{" "}
+            ⚡ Practice web development on{" "}
             <a
               href="https://www.codechef.com/"
               target="_blank"

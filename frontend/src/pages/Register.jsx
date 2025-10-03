@@ -32,9 +32,9 @@ export default function Register({ setUser }) {
   };
  
   return (
-    <section className="flex flex-col md:flex-row h-[90vh] w-full text-white">
-  <div className="flex-1 flex justify-center items-center bg-[#25222f]">
-    <div className="bg-[#1e1b29d2] rounded-2xl p-8 w-[95%] sm:w-[80%] md:w-[70%] lg:w-[65%] shadow-[0_1px_1px_1px_rgba(30,58,138,0.5)]  transition-transform duration-300 ease-in-out hover:translate-y-4 hover:scale-105">
+    <section className="flex flex-col h-full md:flex-row lg:h-[90vh] lg:w-full text-white">
+  <div className="flex-1 flex justify-center items-center bg-[#25222f] pt-10 pb-12">
+    <div className="bg-[#1e1b29d2] rounded-2xl p-8 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[65%] shadow-[0_1px_1px_1px_rgba(30,58,138,0.5)]  transition-transform duration-300 ease-in-out hover:translate-y-4 hover:scale-105">
       <h2 className="text-2xl font-semibold text-center mb-6">
         Sign-UP
       </h2>

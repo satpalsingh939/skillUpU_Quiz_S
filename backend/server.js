@@ -40,10 +40,10 @@ app.post("/api/contact", async (req, res) => {
 });
 
 const PORT = process.env.PORT;
-const MONGO_URI = process.env.MONGO_URI;
+const MONGO_URL = process.env.MONGO_URL;
 
 mongoose
-  .connect(MONGO_URI)
+  .connect(MONGO_URL)
   .then(async () => {
     console.log("✅ MongoDB connected");
     await seedQuestions();

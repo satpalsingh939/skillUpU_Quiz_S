@@ -33,7 +33,7 @@ export default function Login({ setUser }) {
   return (
     <div className="flex flex-col md:flex-row h-[90vh] w-full text-white">
       <div className="flex-1 flex flex-col justify-center items-center p-8 bg-gradient-to-br from-blue-800 to-cyan-500">
-        <h1 className="text-3xl md:text-4xl font-bold mb-4">Welcome Back - <strong>SkillUpU</strong>👋</h1>
+        <h1 className="text-3xl md:text-4xl font-bold mb-4 text-center">Welcome Back - <strong>SkillUpU</strong>👋</h1>
         <p className="text-base md:text-lg text-gray-200 mb-6 max-w-md text-center">
           Login to continue your quiz journey and track your progress.
         </p>
@@ -44,7 +44,7 @@ export default function Login({ setUser }) {
         />
       </div>
 
-      <div className="flex-1 flex justify-center items-center bg-[#25222f]">
+      <div className="flex-1 flex justify-center items-center bg-[#25222f] pt-8 pb-12">
         <div className="bg-[#1e1b29d2] rounded-2xl p-8 w-[90%] sm:w-[80%] md:w-[70%] lg:w-[65%]  shadow-[0_1px_1px_1px_rgba(30,58,138,0.5)]  transition-transform duration-300 ease-in-out hover:translate-y-4 hover:scale-105">
           <h2 className="text-2xl font-semibold text-center mb-6">Sign-IN</h2>
           {msg && <div className="text-red-400 text-center mb-4">{msg}</div>}
