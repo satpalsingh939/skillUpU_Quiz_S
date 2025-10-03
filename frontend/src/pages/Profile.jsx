@@ -6,7 +6,7 @@ export default function Profile() {
   useEffect(() => {
     const token = localStorage.getItem("token");
     if (!token) return;
-    fetch("http://localhost:5000/api/user/profile", {
+    fetch("https://skillupu-quiz-s.onrender.com/api/user/profile", {
       headers: { Authorization: "Bearer " + token },
     })
       .then((r) => r.json())

@@ -42,19 +42,7 @@ export default function LearningResources() {
     },
   ];
 
-  // useEffect(() => {
-  //   fetch("http://localhost:5000/api/learning")
-  //     .then((r) => r.json())
-  //     .then(setData)
-  //     .catch(() => setData({}));
-  // }, []);
 
-  // if (!data)
-  //   return (
-  //     <div className="text-center py-16 text-lg text-blue-400">
-  //       ⏳ Loading Learning Resources...
-  //     </div>
-  //   );
 
   return (
     <section className="mx-auto p-6 bg-[#25222f] text-white shadow-lg min-h-screen">

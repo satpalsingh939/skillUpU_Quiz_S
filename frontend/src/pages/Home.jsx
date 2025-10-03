@@ -12,7 +12,7 @@ export default function Home() {
 
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/questions/domains")
+    fetch("https://skillupu-quiz-s.onrender.com/api/questions/domains")
       .then((res) => res.json())
       .then((data) => {
         setDomains(data);
@@ -23,10 +23,10 @@ export default function Home() {
               ? "Frontend"
               : ["nodejs", "expressjs"].includes(d)
                 ? "Backend"
-              :  ["mongodb", "mysql"].includes(d)
-                ? "Database"
+                : ["mongodb", "mysql"].includes(d)
+                  ? "Database"
 
-                : "Other";
+                  : "Other";
           if (!grouped[cat]) grouped[cat] = [];
           grouped[cat].push(d);
         });
@@ -55,7 +55,7 @@ export default function Home() {
     e.preventDefault();
     // setStatus("Sending...");
     try {
-      const res = await fetch("http://localhost:5000/api/contact", {
+      const res = await fetch("https://skillupu-quiz-s.onrender.com/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
@@ -159,67 +159,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* <section className="px-8 md:px-16 py-16 text-center">
-  
-  <h2 className="text-2xl md:text-3xl font-bold mb-4">
-    📚 Choose Your Field
-  </h2>
-
- 
-  <p className="text-gray-300 text-sm md:text-base mb-8 max-w-xl mx-auto">
-    Click on a domain below to see quizzes related to that field. <br/>
-    Select a quiz, boost your skills, and track and increase your score & growth! 🚀
-  </p>
-
-
-  <div className="flex justify-center flex-wrap gap-6">
-    {domains.map((d) => (
-      <div
-        key={d}
-        onClick={() => openCard(d)}
-        className="bg-[#33415540] px-6 py-5 rounded-lg shadow-md cursor-pointer hover:scale-105 transition"
-      >
-        <h3 className="font-semibold">{d}</h3>
-      </div>
-    ))}
-  </div>
-
-  
-  {activeDomain && (
-    <div
-      className="fixed inset-0 bg-black/60 flex items-center justify-center z-50"
-      onClick={closeCard}
-    >
-      <div
-        className="bg-[#1e1b29] p-8 rounded-xl shadow-lg w-11/12 max-w-md"
-        onClick={(e) => e.stopPropagation()}
-      >
-        <h2 className="text-xl font-bold mb-4">
-          {activeDomain} Quizzes
-        </h2>
-        <div className="flex flex-col gap-3">
-          {quizzes[activeDomain].map((q) => (
-            <div
-              key={q}
-              onClick={() => selectQuiz(q)}
-              className="bg-[#33415560] p-3 rounded-md cursor-pointer hover:bg-[#47556990] transition"
-            >
-              {q} Quiz →
-            </div>
-          ))}
-        </div>
-        <button
-          onClick={closeCard}
-          className="mt-5 w-full px-4 py-2 bg-gradient-to-r from-cyan-400 to-blue-700 text-white rounded-md font-semibold hover:from-cyan-500 hover:to-blue-800"
-        >
-          Close ✖
-        </button>
-      </div>
-    </div>
-  )}
-</section> */}
-
 
       {/* ------------------- */}
       <section className="px-8 md:px-16 py-16 text-center">
