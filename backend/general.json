@@ -1,0 +1,71 @@
+// ---------------- General Knowledge ----------------
+{
+  domain: "general",
+  question: "Who is known as the father of computers?",
+  options: ["Charles Babbage", "Alan Turing", "John von Neumann", "Tim Berners-Lee"],
+  answer: "Charles Babbage",
+  level: "easy"
+},
+{
+  domain: "general",
+  question: "Which company developed the first microprocessor?",
+  options: ["Intel", "IBM", "Microsoft", "Apple"],
+  answer: "Intel",
+  level: "easy"
+},
+{
+  domain: "general",
+  question: "Which protocol is used for secure communication over the internet?",
+  options: ["HTTPS", "FTP", "SMTP", "Telnet"],
+  answer: "HTTPS",
+  level: "easy"
+},
+{
+  domain: "general",
+  question: "Who is the founder of Microsoft?",
+  options: ["Bill Gates", "Steve Jobs", "Elon Musk", "Mark Zuckerberg"],
+  answer: "Bill Gates",
+  level: "easy"
+},
+{
+  domain: "general",
+  question: "Which company created the Android operating system?",
+  options: ["Google", "Apple", "Samsung", "Microsoft"],
+  answer: "Google",
+  level: "easy"
+},
+{
+  domain: "general",
+  question: "What does URL stand for?",
+  options: ["Uniform Resource Locator", "Universal Reference Link", "Unified Resource Link", "Uniform Reference Locator"],
+  answer: "Uniform Resource Locator",
+  level: "medium"
+},
+{
+  domain: "general",
+  question: "Which year was the World Wide Web invented?",
+  options: ["1989", "1995", "1975", "2000"],
+  answer: "1989",
+  level: "medium"
+},
+{
+  domain: "general",
+  question: "Who is the CEO of Tesla and SpaceX?",
+  options: ["Elon Musk", "Jeff Bezos", "Sundar Pichai", "Satya Nadella"],
+  answer: "Elon Musk",
+  level: "medium"
+},
+{
+  domain: "general",
+  question: "Which programming language is known as the mother of all languages?",
+  options: ["C", "Assembly", "Java", "Python"],
+  answer: "C",
+  level: "advanced"
+},
+{
+  domain: "general",
+  question: "Which company developed ChatGPT?",
+  options: ["OpenAI", "Google", "Meta", "IBM"],
+  answer: "OpenAI",
+  level: "advanced"
+},

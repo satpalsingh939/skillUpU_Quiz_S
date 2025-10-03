@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Certificate</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-600 flex items-center justify-center min-h-screen font-sans">
+
+  <div
+    class="relative bg-white w-[940px] h-[630px] shadow-2xl rounded-xl border-[7px] border-gray-400 p-6 flex flex-col items-center">
+
+    <div class="absolute inset-3 border-[4px] border-red-500 rounded-lg pointer-events-none"></div>
+
+    <!-- Decorative Curve -->
+    <div class="absolute top-0 left-0 w-full h-20 overflow-hidden">
+      <svg viewBox="0 0 400 150" preserveAspectRatio="none" class="w-full h-full">
+        <path d="M0,50 C150,150 350,0 500,100 L500,0 L0,0 Z" class="fill-gray-200 opacity-60" />
+      </svg>
+    </div>
+
+    <div class="flex justify-between items-center w-full px-10 mt-8">
+      <div class="flex items-center space-x-1">
+        <img src="./img/image (18).png" class="w-10 h-12" alt="Shield">
+        <h2 class="text-2xl font-bold text-red-400">SkillUpU</h2>
+      </div>
+      <img src="./img/image (20).png" alt="logo" class="w-16 h-14">
+    </div>
+
+    <!-- Title -->
+    <h1 class="text-4xl font-semibold text-center text-red-400 mt-2 mb-5">
+      CERTIFICATE FOR COMPLETION
+    </h1>
+
+    <p class="text-center text-lg text-gray-600">This certificate is proudly presented to</p>
+    <p id="name" class="text-center text-3xl font-serif text-red-500 mt-1"></p>
+
+    <p class="text-center text-lg text-gray-700 mt-2">
+      for successfully passing the
+      <span id="domain" class="font-semibold text-red-400"></span> quiz<br>
+      with Grade : <span id="grade" class="font-semibold text-red-400"></span> and score
+      <span id="percentage" class="font-semibold text-red-500"></span><br>
+
+      <!-- <div class="meta text-gray-600 text-lg mb-6"> -->
+      <!-- Score: <span id="score" class="font-semibold text-green-600"></span> <br> -->
+      <!-- </div> -->
+
+    </p>
+
+    <!-- Seal -->
+    <div class="p-6 opacity-40">
+      <img src="./img/image (23).png" alt="Seal" class="w-[140px] h-[140px]">
+    </div>
+
+    <div class="absolute bottom-28 left-12 right-12 border-t border-gray-400"></div>
+
+
+    <div class="absolute bottom-14 left-12 text-gray-700 text-sm">
+      Issued by <span class="font-semibold text-red-500">SkillUpU</span>
+    </div>
+    <div class="absolute bottom-14 right-12 text-gray-700 text-sm">
+      Issued Date: <span id="date" class="font-semibold text-red-500"></span>
+    </div>
+
+    <div class="absolute bottom-14 left-16 text-center">
+      <img src="./img/sign.png" alt="Signature" class="w-20 h-10 mx-auto">
+      <!-- <p class="text-gray-600 text-sm mt-1">Authorized Signature</p> -->
+    </div>
+
+    <div class="absolute -bottom-12 -right-3">
+      <button onclick="window.print()"
+        class="px-2 py-1 bg-gradient-to-r from-blue-500 to-blue-400 hover:from-blue-600 hover:to-blue-500 text-white font-semibold rounded-xl shadow-md transition-all transform hover:-translate-y-1">
+        Download
+      </button>
+    </div>
+
+  </div>
+
+  <script>
+    function qp(key) { return new URLSearchParams(location.search).get(key) || ''; }
+    document.getElementById('name').innerText = decodeURIComponent(qp('name')).toUpperCase();
+    document.getElementById('domain').innerText = decodeURIComponent(qp('domain')).toUpperCase();
+    // document.getElementById('score').innerText = decodeURIComponent(qp('score'));
+
+    document.getElementById('percentage').innerText = decodeURIComponent(qp('percentage')) + "%";
+    document.getElementById('grade').innerText = decodeURIComponent(qp('grade'));
+
+    const today = new Date();
+    const options = { day: '2-digit', month: 'short', year: 'numeric' };
+    document.getElementById('date').innerText = today.toLocaleDateString('en-GB', options);
+  </script>
+
+</body>
+
+</html>

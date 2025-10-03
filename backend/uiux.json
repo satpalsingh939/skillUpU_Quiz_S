@@ -1,0 +1,106 @@
+// ---------------- UI/UX ----------------
+{
+  domain: "uiux",
+  question: "What does UX stand for?",
+  options: ["User Experience", "User Extension", "Unique Experience", "Universal Exchange"],
+  answer: "User Experience",
+  level: "easy"
+},
+{
+  domain: "uiux",
+  question: "What does UI stand for?",
+  options: ["User Integration", "User Interface", "Universal Interaction", "Unique Input"],
+  answer: "User Interface",
+  level: "easy"
+},
+{
+  domain: "uiux",
+  question: "Which color is considered most calming for users?",
+  options: ["Blue", "Red", "Yellow", "Black"],
+  answer: "Blue",
+  level: "easy"
+},
+{
+  domain: "uiux",
+  question: "Which principle is about keeping designs simple and clear?",
+  options: ["Clarity", "Complexity", "Animation", "Hierarchy"],
+  answer: "Clarity",
+  level: "easy"
+},
+{
+  domain: "uiux",
+  question: "Which tool is widely used for UI design?",
+  options: ["Figma", "MySQL", "Node.js", "MongoDB"],
+  answer: "Figma",
+  level: "easy"
+},
+{
+  domain: "uiux",
+  question: "Which design principle ensures important elements stand out?",
+  options: ["Contrast", "Consistency", "Repetition", "Balance"],
+  answer: "Contrast",
+  level: "medium"
+},
+{
+  domain: "uiux",
+  question: "Which layout technique adapts to different screen sizes?",
+  options: ["Responsive Design", "Fixed Design", "Static Layout", "Grid-less Layout"],
+  answer: "Responsive Design",
+  level: "medium"
+},
+{
+  domain: "uiux",
+  question: "Which principle ensures related elements are grouped together?",
+  options: ["Proximity", "Alignment", "Hierarchy", "Typography"],
+  answer: "Proximity",
+  level: "medium"
+},
+{
+  domain: "uiux",
+  question: "Which typography rule improves readability?",
+  options: ["Use proper line spacing", "Use all caps", "Use random fonts", "Avoid contrast"],
+  answer: "Use proper line spacing",
+  level: "medium"
+},
+{
+  domain: "uiux",
+  question: "Which UX law states 'Users spend most of their time on other sites'?",
+  options: ["Jakob’s Law", "Fitts’s Law", "Hick’s Law", "Miller’s Law"],
+  answer: "Jakob’s Law",
+  level: "medium"
+},
+{
+  domain: "uiux",
+  question: "Which UX law explains that too many options slow decision-making?",
+  options: ["Hick’s Law", "Jakob’s Law", "Fitts’s Law", "Law of Proximity"],
+  answer: "Hick’s Law",
+  level: "advanced"
+},
+{
+  domain: "uiux",
+  question: "Which principle ensures consistency across an interface?",
+  options: ["Design System", "Random Layout", "Overloading", "Minimalism"],
+  answer: "Design System",
+  level: "advanced"
+},
+{
+  domain: "uiux",
+  question: "Which design principle focuses on reducing user’s memory load?",
+  options: ["Recognition over Recall", "Complexity", "Contrast", "Consistency"],
+  answer: "Recognition over Recall",
+  level: "advanced"
+},
+{
+  domain: "uiux",
+  question: "Which law states 'The time to acquire a target depends on its size and distance'?",
+  options: ["Fitts’s Law", "Jakob’s Law", "Miller’s Law", "Law of Closure"],
+  answer: "Fitts’s Law",
+  level: "advanced"
+},
+{
+  domain: "uiux",
+  question: "Which UX deliverable shows a low-fidelity structure of a design?",
+  options: ["Wireframe", "Prototype", "Mockup", "Flowchart"],
+  answer: "Wireframe",
+  level: "advanced"
+},

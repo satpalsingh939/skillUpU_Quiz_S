@@ -1,0 +1,439 @@
+
+const quizData = [
+  {
+    domain: "html",
+    question: "Which tag is used to define a hyperlink in HTML?",
+    options: ["<a>", "<link>", "<href>", "<hyper>"],
+    answer: "<a>",
+    level: "easy"
+  },
+  {
+    domain: "html",
+    question: "Which HTML tag is used to display the largest heading?",
+    options: ["<h1>", "<h6>", "<heading>", "<title>"],
+    answer: "<h1>",
+    level: "easy"
+  },
+  {
+    domain: "html",
+    question: "Which attribute is used to provide alternative text for an image?",
+    options: ["alt", "title", "src", "href"],
+    answer: "alt",
+    level: "easy"
+  },
+  {
+    domain: "html",
+    question: "Which tag is used to insert a line break?",
+    options: ["<br>", "<hr>", "<break>", "<line>"],
+    answer: "<br>",
+    level: "easy"
+  },
+  {
+    domain: "html",
+    question: "Which HTML element is used to create an unordered list?",
+    options: ["<ol>", "<ul>", "<li>", "<list>"],
+    answer: "<ul>",
+    level: "easy"
+  },
+  {
+    domain: "html",
+    question: "Which tag is used to define a table row?",
+    options: ["<td>", "<tr>", "<th>", "<row>"],
+    answer: "<tr>",
+    level: "medium"
+  },
+  {
+    domain: "html",
+    question: "Which attribute specifies where to open the linked document?",
+    options: ["target", "rel", "href", "src"],
+    answer: "target",
+    level: "medium"
+  },
+  {
+    domain: "html",
+    question: "Which tag is used to embed a video in HTML5?",
+    options: ["<media>", "<video>", "<embed>", "<movie>"],
+    answer: "<video>",
+    level: "medium"
+  },
+  {
+    domain: "html",
+    question: "Which attribute in <form> defines where to send form data?",
+    options: ["action", "method", "target", "enctype"],
+    answer: "action",
+    level: "medium"
+  },
+  {
+    domain: "html",
+    question: "Which element is used to group block-level content in HTML5?",
+    options: ["<div>", "<section>", "<article>", "<span>"],
+    answer: "<section>",
+    level: "medium"
+  },
+  {
+    domain: "html",
+    question: "Which HTML5 element is used to define self-contained content?",
+    options: ["<article>", "<aside>", "<section>", "<main>"],
+    answer: "<article>",
+    level: "advanced"
+  },
+  {
+    domain: "html",
+    question: "Which attribute is used with <iframe> to improve security?",
+    options: ["sandbox", "secure", "policy", "restrict"],
+    answer: "sandbox",
+    level: "advanced"
+  },
+  {
+    domain: "html",
+    question: "Which HTML5 API allows storing data locally without cookies?",
+    options: ["Web Storage", "IndexedDB", "LocalStorage", "SessionStorage"],
+    answer: "Web Storage",
+    level: "advanced"
+  },
+  {
+    domain: "html",
+    question: "Which HTML element provides metadata for search engines?",
+    options: ["<meta>", "<mark>", "<data>", "<code>"],
+    answer: "<meta>",
+    level: "advanced"
+  },
+  {
+    domain: "html",
+    question: "Which new input type is used for selecting a color?",
+    options: ["color", "picker", "palette", "hex"],
+    answer: "color",
+    level: "advanced"
+  },
+
+  // ---------------- CSS ----------------
+  {
+    domain: "css",
+    question: "Which property changes the background color?",
+    options: ["color", "bgcolor", "background-color", "background"],
+    answer: "background-color",
+    level: "easy"
+  },
+  {
+    domain: "css",
+    question: "Which CSS property controls text size?",
+    options: ["font-style", "text-size", "font-size", "text-style"],
+    answer: "font-size",
+    level: "easy"
+  },
+  {
+    domain: "css",
+    question: "Which property makes text bold?",
+    options: ["font-style", "font-weight", "bold", "text-decoration"],
+    answer: "font-weight",
+    level: "easy"
+  },
+  {
+    domain: "css",
+    question: "Which value of position makes an element stay fixed?",
+    options: ["absolute", "relative", "fixed", "sticky"],
+    answer: "fixed",
+    level: "easy"
+  },
+  {
+    domain: "css",
+    question: "Which property sets space between lines?",
+    options: ["letter-spacing", "word-spacing", "line-height", "spacing"],
+    answer: "line-height",
+    level: "easy"
+  },
+  {
+    domain: "css",
+    question: "Which property is used for shadow effects?",
+    options: ["box-shadow", "text-shadow", "shadow", "filter"],
+    answer: "box-shadow",
+    level: "medium"
+  },
+  {
+    domain: "css",
+    question: "Which property makes a flex container?",
+    options: ["display: block", "display: flex", "position: flex", "flex-mode"],
+    answer: "display: flex",
+    level: "medium"
+  },
+  {
+    domain: "css",
+    question: "Which CSS unit is relative to viewport height?",
+    options: ["px", "em", "vh", "vw"],
+    answer: "vh",
+    level: "medium"
+  },
+  {
+    domain: "css",
+    question: "Which property is used for grid layout?",
+    options: ["display: grid", "grid-template", "grid-layout", "grid-container"],
+    answer: "display: grid",
+    level: "medium"
+  },
+  {
+    domain: "css",
+    question: "Which property makes animation smooth?",
+    options: ["animation-delay", "animation-timing-function", "transition", "easing"],
+    answer: "animation-timing-function",
+    level: "medium"
+  },
+  {
+    domain: "css",
+    question: "Which pseudo-class styles visited links?",
+    options: [":hover", ":active", ":visited", ":focus"],
+    answer: ":visited",
+    level: "advanced"
+  },
+  {
+    domain: "css",
+    question: "Which CSS function is used for variables?",
+    options: ["var()", "set()", "css-var()", "get()"],
+    answer: "var()",
+    level: "advanced"
+  },
+  {
+    domain: "css",
+    question: "Which property enables responsive text using clamp?",
+    options: ["font-size", "text-scale", "clamp-size", "dynamic-text"],
+    answer: "font-size",
+    level: "advanced"
+  },
+  {
+    domain: "css",
+    question: "Which property controls stacking order?",
+    options: ["order", "layer", "z-index", "priority"],
+    answer: "z-index",
+    level: "advanced"
+  },
+  {
+    domain: "css",
+    question: "Which at-rule is used for media queries?",
+    options: ["@media", "@query", "@responsive", "@screen"],
+    answer: "@media",
+    level: "advanced"
+  },
+
+  // ---------------- JavaScript ----------------
+{
+  domain: "javascript",
+  question: "Which keyword declares a variable in JavaScript?",
+  options: ["var", "let", "const", "All of the above"],
+  answer: "All of the above",
+  level: "easy"
+},
+{
+  domain: "javascript",
+  question: "Which method is used to print values in console?",
+  options: ["print()", "console.log()", "log.print()", "echo()"],
+  answer: "console.log()",
+  level: "easy"
+},
+{
+  domain: "javascript",
+  question: "Which operator is used for strict equality check?",
+  options: ["=", "==", "===", "!="],
+  answer: "===",
+  level: "easy"
+},
+{
+  domain: "javascript",
+  question: "Which built-in method converts JSON string to object?",
+  options: ["JSON.parse()", "JSON.stringify()", "parse.JSON()", "toJSON()"],
+  answer: "JSON.parse()",
+  level: "easy"
+},
+{
+  domain: "javascript",
+  question: "Which symbol is used for single-line comments?",
+  options: ["//", "/* */", "#", "<!-- -->"],
+  answer: "//",
+  level: "easy"
+},
+{
+  domain: "javascript",
+  question: "Which array method adds elements to the end?",
+  options: ["push()", "pop()", "shift()", "unshift()"],
+  answer: "push()",
+  level: "medium"
+},
+{
+  domain: "javascript",
+  question: "Which function is used to schedule code execution after delay?",
+  options: ["setTimeout()", "setInterval()", "delay()", "sleep()"],
+  answer: "setTimeout()",
+  level: "medium"
+},
+{
+  domain: "javascript",
+  question: "What will typeof null return?",
+  options: ["null", "undefined", "object", "number"],
+  answer: "object",
+  level: "medium"
+},
+{
+  domain: "javascript",
+  question: "Which ES6 feature allows unpacking values from arrays/objects?",
+  options: ["Destructuring", "Hoisting", "Spread", "Closure"],
+  answer: "Destructuring",
+  level: "medium"
+},
+{
+  domain: "javascript",
+  question: "Which array method creates a new array with filtered elements?",
+  options: ["map()", "filter()", "reduce()", "forEach()"],
+  answer: "filter()",
+  level: "medium"
+},
+{
+  domain: "javascript",
+  question: "What is the output of '2' + 2?",
+  options: ["22", "4", "NaN", "Error"],
+  answer: "22",
+  level: "advanced"
+},
+{
+  domain: "javascript",
+  question: "Which concept allows inner functions to access outer function’s variables?",
+  options: ["Closure", "Hoisting", "Currying", "Scope"],
+  answer: "Closure",
+  level: "advanced"
+},
+{
+  domain: "javascript",
+  question: "Which ES6 feature is used for async programming?",
+  options: ["Promises", "Callbacks", "Generators", "setInterval"],
+  answer: "Promises",
+  level: "advanced"
+},
+{
+  domain: "javascript",
+  question: "Which operator is used for optional chaining?",
+  options: ["?.", "??", "::", "=>"],
+  answer: "?.",
+  level: "advanced"
+},
+{
+  domain: "javascript",
+  question: "Which method combines array elements into a string?",
+  options: ["join()", "concat()", "reduce()", "map()"],
+  answer: "join()",
+  level: "advanced"
+},
+// ---------------- ReactJS ----------------
+{
+  domain: "reactjs",
+  question: "Which hook is used for state management in React?",
+  options: ["useState", "useEffect", "useContext", "useMemo"],
+  answer: "useState",
+  level: "easy"
+},
+{
+  domain: "reactjs",
+  question: "What does JSX stand for?",
+  options: ["JavaScript XML", "JavaScript Extension", "Java Syntax Extension", "JSON-like Syntax"],
+  answer: "JavaScript XML",
+  level: "easy"
+},
+{
+  domain: "reactjs",
+  question: "Which method is used to render elements into DOM in older versions?",
+  options: ["ReactDOM.render()", "React.render()", "root.render()", "renderDOM()"],
+  answer: "ReactDOM.render()",
+  level: "easy"
+},
+{
+  domain: "reactjs",
+  question: "Which hook is used for side effects?",
+  options: ["useEffect", "useState", "useMemo", "useReducer"],
+  answer: "useEffect",
+  level: "easy"
+},
+{
+  domain: "reactjs",
+  question: "Which prop is used to pass data to components?",
+  options: ["props", "state", "data", "context"],
+  answer: "props",
+  level: "easy"
+},
+{
+  domain: "reactjs",
+  question: "Which hook is used to access context values?",
+  options: ["useContext", "useReducer", "useRef", "useMemo"],
+  answer: "useContext",
+  level: "medium"
+},
+{
+  domain: "reactjs",
+  question: "Which hook is used for performance optimization by memoizing values?",
+  options: ["useMemo", "useCallback", "useEffect", "useState"],
+  answer: "useMemo",
+  level: "medium"
+},
+{
+  domain: "reactjs",
+  question: "Which function is used to create a context?",
+  options: ["React.createContext()", "useContext()", "createContext()", "Context.Provider()"],
+  answer: "React.createContext()",
+  level: "medium"
+},
+{
+  domain: "reactjs",
+  question: "Which hook allows accessing DOM elements directly?",
+  options: ["useRef", "useMemo", "useEffect", "useState"],
+  answer: "useRef",
+  level: "medium"
+},
+{
+  domain: "reactjs",
+  question: "Which hook is used for complex state logic?",
+  options: ["useReducer", "useContext", "useMemo", "useLayoutEffect"],
+  answer: "useReducer",
+  level: "medium"
+},
+{
+  domain: "reactjs",
+  question: "What is the difference between useEffect and useLayoutEffect?",
+  options: [
+    "useEffect runs after paint, useLayoutEffect before paint",
+    "Both run at same time",
+    "useLayoutEffect is slower",
+    "useEffect is synchronous"
+  ],
+  answer: "useEffect runs after paint, useLayoutEffect before paint",
+  level: "advanced"
+},
+{
+  domain: "reactjs",
+  question: "Which hook prevents unnecessary re-renders of functions?",
+  options: ["useCallback", "useMemo", "useEffect", "useReducer"],
+  answer: "useCallback",
+  level: "advanced"
+},
+{
+  domain: "reactjs",
+  question: "What does React.StrictMode do?",
+  options: [
+    "Helps find potential problems",
+    "Improves performance",
+    "Removes unused code",
+    "Compiles faster"
+  ],
+  answer: "Helps find potential problems",
+  level: "advanced"
+},
+{
+  domain: "reactjs",
+  question: "Which new API replaces ReactDOM.render in React 18?",
+  options: ["createRoot", "hydrate", "renderRoot", "ReactDOM.init"],
+  answer: "createRoot",
+  level: "advanced"
+},
+{
+  domain: "reactjs",
+  question: "What is Suspense used for in React?",
+  options: ["Code splitting & lazy loading", "State management", "Styling", "Performance monitoring"],
+  answer: "Code splitting & lazy loading",
+  level: "advanced"
+},
+
+];

@@ -1,0 +1,102 @@
+
+import React, { useState } from "react";
+import { useNavigate, Link } from "react-router-dom";
+
+export default function Register({ setUser }) {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [msg, setMsg] = useState("");
+  const navigate = useNavigate();
+
+  const submit = async (e) => {
+    e.preventDefault();
+    try {
+      const res = await fetch("http://localhost:5000/api/auth/register", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email, password }),
+      });
+      const data = await res.json();
+      if (res.ok) {
+        localStorage.setItem("token", data.token);
+        localStorage.setItem("userName", data.user.name);
+        setUser(data.user);
+        navigate("/home");
+      } else {
+        setMsg(data.msg || "Register failed");
+      }
+    } catch (err) {
+      setMsg("Server error");
+    }
+  };
+ 
+  return (
+    <section className="flex flex-col md:flex-row h-[90vh] w-full text-white">
+  <div className="flex-1 flex justify-center items-center bg-[#25222f]">
+    <div className="bg-[#1e1b29d2] rounded-2xl p-8 w-[95%] sm:w-[80%] md:w-[70%] lg:w-[65%] shadow-[0_1px_1px_1px_rgba(30,58,138,0.5)]  transition-transform duration-300 ease-in-out hover:translate-y-4 hover:scale-105">
+      <h2 className="text-2xl font-semibold text-center mb-6">
+        Sign-UP
+      </h2>
+      {msg && <div className="text-red-400 text-center mb-4">{msg}</div>}
+      <form onSubmit={submit} className="flex flex-col gap-4">
+        <input
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          placeholder="Full Name"
+          required
+          className="p-3 rounded-lg text-black focus:ring-2 focus:ring-cyan-400 outline-none bg-white/90"
+        />
+        <input
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Email"
+          required
+          className="p-3 rounded-lg text-black focus:ring-2 focus:ring-cyan-400 outline-none bg-white/90"
+        />
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          placeholder="Password"
+          required
+          className="p-3 rounded-lg text-black focus:ring-2 focus:ring-cyan-400 outline-none bg-white/90"
+        />
+        <button
+          type="submit"
+          className="w-full p-3 rounded-lg bg-gradient-to-r from-cyan-400 to-blue-600 text-white font-semibold hover:from-cyan-500 hover:to-blue-700 transition-all"
+        >
+          Register
+        </button>
+      </form>
+      <p className="text-sm text-center mt-4">
+        Already have an account?{" "}
+        <Link
+          to="/login"
+          className="text-cyan-400 font-semibold hover:underline"
+        >
+          Login here
+        </Link>
+      </p>
+    </div>
+  </div>
+
+  <div className="flex-1 flex flex-col justify-center items-center p-8 bg-gradient-to-br from-blue-800 to-cyan-500 text-center md:text-left">
+    <h1 className="text-3xl md:text-4xl font-bold mb-4">
+      Join Our Quiz Platform - <strong>SkillUpU</strong>🎓
+    </h1>
+    <p className="text-base md:text-lg text-gray-200 mb-6 max-w-md">
+      Create your free account and start practicing quizzes across multiple
+      domains. Track your progress, earn certificates, and boost your
+      learning journey 🚀 
+    </p>
+    <img
+      src="/img/image (15).png"
+      alt="Quiz Illustration"
+      className="w-3/4 md:w-2/3 lg:w-2/3 rounded-xl shadow-[0_2px_0px_0px_rgba(30,58,138,0.5)]  transition-transform duration-300 ease-in-out hover:rotate-3 hover:scale-105"
+    />
+  </div>
+</section>
+
+  );
+}

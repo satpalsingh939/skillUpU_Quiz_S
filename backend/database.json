@@ -1,0 +1,215 @@
+// ---------------- MongoDB ----------------
+{
+  domain: "mongodb",
+  question: "Which command is used to show all databases in MongoDB?",
+  options: ["show dbs", "show databases", "list dbs", "get databases"],
+  answer: "show dbs",
+  level: "easy"
+},
+{
+  domain: "mongodb",
+  question: "Which data format does MongoDB use to store documents?",
+  options: ["BSON", "JSON", "XML", "CSV"],
+  answer: "BSON",
+  level: "easy"
+},
+{
+  domain: "mongodb",
+  question: "Which command is used to switch to a database?",
+  options: ["use dbname", "switch dbname", "select dbname", "db.use()"],
+  answer: "use dbname",
+  level: "easy"
+},
+{
+  domain: "mongodb",
+  question: "Which command inserts one document into a collection?",
+  options: ["insertOne()", "insert()", "addOne()", "create()"],
+  answer: "insertOne()",
+  level: "easy"
+},
+{
+  domain: "mongodb",
+  question: "Which operator is used for pattern matching in MongoDB?",
+  options: ["$regex", "$match", "$like", "$search"],
+  answer: "$regex",
+  level: "easy"
+},
+{
+  domain: "mongodb",
+  question: "Which function updates multiple documents?",
+  options: ["updateMany()", "updateAll()", "updateMultiple()", "update()"],
+  answer: "updateMany()",
+  level: "medium"
+},
+{
+  domain: "mongodb",
+  question: "Which function deletes all matching documents?",
+  options: ["deleteMany()", "remove()", "deleteAll()", "drop()"],
+  answer: "deleteMany()",
+  level: "medium"
+},
+{
+  domain: "mongodb",
+  question: "Which function returns a single matching document?",
+  options: ["findOne()", "find()", "getOne()", "fetchOne()"],
+  answer: "findOne()",
+  level: "medium"
+},
+{
+  domain: "mongodb",
+  question: "Which command drops a collection?",
+  options: ["db.collection.drop()", "db.collection.delete()", "dropCollection()", "removeCollection()"],
+  answer: "db.collection.drop()",
+  level: "medium"
+},
+{
+  domain: "mongodb",
+  question: "Which function is used for aggregation in MongoDB?",
+  options: ["aggregate()", "group()", "mapReduce()", "pipeline()"],
+  answer: "aggregate()",
+  level: "medium"
+},
+{
+  domain: "mongodb",
+  question: "Which MongoDB operator is used for logical OR?",
+  options: ["$or", "$and", "$in", "$eq"],
+  answer: "$or",
+  level: "advanced"
+},
+{
+  domain: "mongodb",
+  question: "Which MongoDB operator is used for range queries?",
+  options: ["$gt/$lt", "$in", "$range", "$between"],
+  answer: "$gt/$lt",
+  level: "advanced"
+},
+{
+  domain: "mongodb",
+  question: "Which index type supports geospatial queries?",
+  options: ["2dsphere", "text", "hashed", "compound"],
+  answer: "2dsphere",
+  level: "advanced"
+},
+{
+  domain: "mongodb",
+  question: "Which replication feature provides automatic failover?",
+  options: ["Replica Set", "Sharding", "Cluster", "Backup"],
+  answer: "Replica Set",
+  level: "advanced"
+},
+{
+  domain: "mongodb",
+  question: "Which feature distributes data across multiple servers?",
+  options: ["Sharding", "Replication", "Indexing", "Aggregation"],
+  answer: "Sharding",
+  level: "advanced"
+},
+
+
+
+// ---------------- MySQL ----------------
+{
+  domain: "mysql",
+  question: "Which command is used to show all databases in MySQL?",
+  options: ["SHOW DATABASES;", "LIST DATABASES;", "GET DATABASES;", "DISPLAY DATABASES;"],
+  answer: "SHOW DATABASES;",
+  level: "easy"
+},
+{
+  domain: "mysql",
+  question: "Which keyword is used to create a database?",
+  options: ["CREATE DATABASE", "MAKE DATABASE", "NEW DATABASE", "ADD DATABASE"],
+  answer: "CREATE DATABASE",
+  level: "easy"
+},
+{
+  domain: "mysql",
+  question: "Which SQL statement retrieves data?",
+  options: ["SELECT", "INSERT", "UPDATE", "DELETE"],
+  answer: "SELECT",
+  level: "easy"
+},
+{
+  domain: "mysql",
+  question: "Which command is used to remove all rows from a table but keep its structure?",
+  options: ["TRUNCATE", "DELETE", "DROP", "REMOVE"],
+  answer: "TRUNCATE",
+  level: "easy"
+},
+{
+  domain: "mysql",
+  question: "Which symbol is used for a single-line comment in MySQL?",
+  options: ["--", "/*", "//", "#"],
+  answer: "--",
+  level: "easy"
+},
+{
+  domain: "mysql",
+  question: "Which SQL clause is used to filter records?",
+  options: ["WHERE", "GROUP BY", "HAVING", "ORDER BY"],
+  answer: "WHERE",
+  level: "medium"
+},
+{
+  domain: "mysql",
+  question: "Which SQL function returns the total number of rows?",
+  options: ["COUNT()", "SUM()", "TOTAL()", "ROWS()"],
+  answer: "COUNT()",
+  level: "medium"
+},
+{
+  domain: "mysql",
+  question: "Which SQL keyword sorts the result set?",
+  options: ["ORDER BY", "SORT BY", "GROUP BY", "RANK BY"],
+  answer: "ORDER BY",
+  level: "medium"
+},
+{
+  domain: "mysql",
+  question: "Which SQL constraint ensures unique values in a column?",
+  options: ["UNIQUE", "PRIMARY KEY", "NOT NULL", "CHECK"],
+  answer: "UNIQUE",
+  level: "medium"
+},
+{
+  domain: "mysql",
+  question: "Which SQL statement is used to update existing data?",
+  options: ["UPDATE", "INSERT", "MODIFY", "ALTER"],
+  answer: "UPDATE",
+  level: "medium"
+},
+{
+  domain: "mysql",
+  question: "Which join returns all rows from both tables with NULLs where no match?",
+  options: ["FULL OUTER JOIN", "INNER JOIN", "LEFT JOIN", "RIGHT JOIN"],
+  answer: "FULL OUTER JOIN",
+  level: "advanced"
+},
+{
+  domain: "mysql",
+  question: "Which index improves text search performance?",
+  options: ["FULLTEXT", "HASH", "BTREE", "PRIMARY"],
+  answer: "FULLTEXT",
+  level: "advanced"
+},
+{
+  domain: "mysql",
+  question: "Which SQL command is used to give privileges to a user?",
+  options: ["GRANT", "ALLOW", "PERMIT", "ACCESS"],
+  answer: "GRANT",
+  level: "advanced"
+},
+{
+  domain: "mysql",
+  question: "Which SQL constraint ensures referential integrity?",
+  options: ["FOREIGN KEY", "PRIMARY KEY", "UNIQUE", "CHECK"],
+  answer: "FOREIGN KEY",
+  level: "advanced"
+},
+{
+  domain: "mysql",
+  question: "Which storage engine in MySQL supports transactions?",
+  options: ["InnoDB", "MyISAM", "Memory", "CSV"],
+  answer: "InnoDB",
+  level: "advanced"
+},

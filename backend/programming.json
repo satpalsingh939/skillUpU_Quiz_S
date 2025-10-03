@@ -1,0 +1,424 @@
+// ---------------- C ----------------
+{
+  domain: "c",
+  question: "Which symbol is used to end a statement in C?",
+  options: [";", ":", ".", ","],
+  answer: ";",
+  level: "easy"
+},
+{
+  domain: "c",
+  question: "Which function is used to print output in C?",
+  options: ["printf()", "cout", "System.out.println()", "print()"],
+  answer: "printf()",
+  level: "easy"
+},
+{
+  domain: "c",
+  question: "Which keyword is used to declare a constant in C?",
+  options: ["const", "define", "final", "static"],
+  answer: "const",
+  level: "easy"
+},
+{
+  domain: "c",
+  question: "What is the default return type of a C function if not specified?",
+  options: ["int", "void", "float", "char"],
+  answer: "int",
+  level: "easy"
+},
+{
+  domain: "c",
+  question: "Which loop is guaranteed to execute at least once?",
+  options: ["do-while", "for", "while", "foreach"],
+  answer: "do-while",
+  level: "easy"
+},
+{
+  domain: "c",
+  question: "Which operator is used to access the value at an address?",
+  options: ["*", "&", "->", "%"],
+  answer: "*",
+  level: "medium"
+},
+{
+  domain: "c",
+  question: "Which header file is required for malloc() function?",
+  options: ["stdlib.h", "stdio.h", "string.h", "math.h"],
+  answer: "stdlib.h",
+  level: "medium"
+},
+{
+  domain: "c",
+  question: "Which keyword is used to exit from a loop in C?",
+  options: ["break", "stop", "exit", "end"],
+  answer: "break",
+  level: "medium"
+},
+{
+  domain: "c",
+  question: "Which storage class stores a variable in memory but hides from other files?",
+  options: ["static", "extern", "auto", "register"],
+  answer: "static",
+  level: "medium"
+},
+{
+  domain: "c",
+  question: "Which function is used to compare two strings?",
+  options: ["strcmp()", "strcat()", "strlen()", "strcpy()"],
+  answer: "strcmp()",
+  level: "medium"
+},
+{
+  domain: "c",
+  question: "Which operator is used for structure pointer access?",
+  options: ["->", ".", "*", "&"],
+  answer: "->",
+  level: "advanced"
+},
+{
+  domain: "c",
+  question: "Which keyword is used to create a user-defined data type?",
+  options: ["typedef", "struct", "union", "define"],
+  answer: "typedef",
+  level: "advanced"
+},
+{
+  domain: "c",
+  question: "Which function is used to free allocated memory?",
+  options: ["free()", "delete()", "dispose()", "clear()"],
+  answer: "free()",
+  level: "advanced"
+},
+{
+  domain: "c",
+  question: "Which kind of recursion calls itself indirectly?",
+  options: ["Indirect recursion", "Direct recursion", "Tail recursion", "Head recursion"],
+  answer: "Indirect recursion",
+  level: "advanced"
+},
+{
+  domain: "c",
+  question: "What is the maximum size of an array in C?",
+  options: ["Depends on system memory", "10000", "65535", "32767"],
+  answer: "Depends on system memory",
+  level: "advanced"
+},
+// ---------------- C++ ----------------
+{
+  domain: "cpp",
+  question: "Which operator is overloaded by default in C++?",
+  options: ["=", "+", "-", "++"],
+  answer: "=",
+  level: "easy"
+},
+{
+  domain: "cpp",
+  question: "Which keyword is used to create an object?",
+  options: ["new", "object", "make", "create"],
+  answer: "new",
+  level: "easy"
+},
+{
+  domain: "cpp",
+  question: "Which function is called when an object is destroyed?",
+  options: ["Destructor", "Constructor", "free()", "end()"],
+  answer: "Destructor",
+  level: "easy"
+},
+{
+  domain: "cpp",
+  question: "Which concept allows function names to be reused with different arguments?",
+  options: ["Function Overloading", "Encapsulation", "Polymorphism", "Inheritance"],
+  answer: "Function Overloading",
+  level: "easy"
+},
+{
+  domain: "cpp",
+  question: "Which header file is needed for cin and cout?",
+  options: ["iostream", "stdio.h", "conio.h", "stream.h"],
+  answer: "iostream",
+  level: "easy"
+},
+{
+  domain: "cpp",
+  question: "Which concept hides internal details and shows only functionality?",
+  options: ["Abstraction", "Inheritance", "Polymorphism", "Encapsulation"],
+  answer: "Abstraction",
+  level: "medium"
+},
+{
+  domain: "cpp",
+  question: "Which operator is used to access class members via pointer?",
+  options: ["->", ".", "*", "&"],
+  answer: "->",
+  level: "medium"
+},
+{
+  domain: "cpp",
+  question: "Which keyword prevents a class from being inherited?",
+  options: ["final", "sealed", "private", "protected"],
+  answer: "final",
+  level: "medium"
+},
+{
+  domain: "cpp",
+  question: "Which feature allows a base class pointer to refer to derived class object?",
+  options: ["Polymorphism", "Encapsulation", "Overloading", "Composition"],
+  answer: "Polymorphism",
+  level: "medium"
+},
+{
+  domain: "cpp",
+  question: "Which type of constructor takes another object as a parameter?",
+  options: ["Copy Constructor", "Parameterized Constructor", "Default Constructor", "Virtual Constructor"],
+  answer: "Copy Constructor",
+  level: "medium"
+},
+{
+  domain: "cpp",
+  question: "Which keyword defines a template in C++?",
+  options: ["template", "class", "generic", "type"],
+  answer: "template",
+  level: "advanced"
+},
+{
+  domain: "cpp",
+  question: "Which type of inheritance causes diamond problem?",
+  options: ["Multiple Inheritance", "Single Inheritance", "Hierarchical", "Multilevel"],
+  answer: "Multiple Inheritance",
+  level: "advanced"
+},
+{
+  domain: "cpp",
+  question: "Which mechanism ensures a function is resolved at runtime?",
+  options: ["Virtual Function", "Inline Function", "Static Function", "Friend Function"],
+  answer: "Virtual Function",
+  level: "advanced"
+},
+{
+  domain: "cpp",
+  question: "Which smart pointer automatically destroys unused objects?",
+  options: ["unique_ptr", "auto_ptr", "shared_ptr", "weak_ptr"],
+  answer: "unique_ptr",
+  level: "advanced"
+},
+{
+  domain: "cpp",
+  question: "Which feature allows operator + to work with user-defined classes?",
+  options: ["Operator Overloading", "Encapsulation", "Inheritance", "Abstraction"],
+  answer: "Operator Overloading",
+  level: "advanced"
+},
+// ---------------- Java ----------------
+{
+  domain: "java",
+  question: "Which keyword is used to define a class in Java?",
+  options: ["class", "struct", "object", "define"],
+  answer: "class",
+  level: "easy"
+},
+{
+  domain: "java",
+  question: "Which method is the entry point of a Java program?",
+  options: ["main()", "start()", "init()", "run()"],
+  answer: "main()",
+  level: "easy"
+},
+{
+  domain: "java",
+  question: "Which symbol is used for single-line comments in Java?",
+  options: ["//", "/*", "--", "#"],
+  answer: "//",
+  level: "easy"
+},
+{
+  domain: "java",
+  question: "Which keyword is used to inherit a class?",
+  options: ["extends", "implements", "inherits", "super"],
+  answer: "extends",
+  level: "easy"
+},
+{
+  domain: "java",
+  question: "Which collection class allows duplicate elements?",
+  options: ["List", "Set", "Map", "Queue"],
+  answer: "List",
+  level: "easy"
+},
+{
+  domain: "java",
+  question: "Which keyword is used to handle exceptions?",
+  options: ["try-catch", "throw", "error", "assert"],
+  answer: "try-catch",
+  level: "medium"
+},
+{
+  domain: "java",
+  question: "Which Java keyword creates an object?",
+  options: ["new", "create", "object", "init"],
+  answer: "new",
+  level: "medium"
+},
+{
+  domain: "java",
+  question: "Which Java package contains collections framework?",
+  options: ["java.util", "java.io", "java.sql", "java.lang"],
+  answer: "java.util",
+  level: "medium"
+},
+{
+  domain: "java",
+  question: "Which keyword is used for multiple inheritance in Java?",
+  options: ["interfaces", "extends", "virtual", "templates"],
+  answer: "interfaces",
+  level: "medium"
+},
+{
+  domain: "java",
+  question: "Which method is called automatically when object is garbage collected?",
+  options: ["finalize()", "delete()", "destroy()", "dispose()"],
+  answer: "finalize()",
+  level: "medium"
+},
+{
+  domain: "java",
+  question: "Which feature ensures one method behaves differently based on input?",
+  options: ["Polymorphism", "Inheritance", "Encapsulation", "Abstraction"],
+  answer: "Polymorphism",
+  level: "advanced"
+},
+{
+  domain: "java",
+  question: "Which keyword prevents a method from being overridden?",
+  options: ["final", "static", "private", "sealed"],
+  answer: "final",
+  level: "advanced"
+},
+{
+  domain: "java",
+  question: "Which JVM memory stores local variables?",
+  options: ["Stack", "Heap", "Method Area", "PermGen"],
+  answer: "Stack",
+  level: "advanced"
+},
+{
+  domain: "java",
+  question: "Which design pattern is used for database connection pooling?",
+  options: ["Singleton", "Factory", "Observer", "Adapter"],
+  answer: "Singleton",
+  level: "advanced"
+},
+{
+  domain: "java",
+  question: "Which keyword is used to call the parent class constructor?",
+  options: ["super", "this", "parent", "base"],
+  answer: "super",
+  level: "advanced"
+},
+// ---------------- Python ----------------
+{
+  domain: "python",
+  question: "Which symbol is used for single-line comments in Python?",
+  options: ["#", "//", "--", "/*"],
+  answer: "#",
+  level: "easy"
+},
+{
+  domain: "python",
+  question: "Which function is used to display output in Python?",
+  options: ["print()", "echo()", "display()", "show()"],
+  answer: "print()",
+  level: "easy"
+},
+{
+  domain: "python",
+  question: "Which keyword defines a function in Python?",
+  options: ["def", "function", "lambda", "fun"],
+  answer: "def",
+  level: "easy"
+},
+{
+  domain: "python",
+  question: "Which data type is mutable in Python?",
+  options: ["List", "Tuple", "String", "Integer"],
+  answer: "List",
+  level: "easy"
+},
+{
+  domain: "python",
+  question: "Which keyword is used for error handling?",
+  options: ["try-except", "throw", "error", "catch"],
+  answer: "try-except",
+  level: "easy"
+},
+{
+  domain: "python",
+  question: "Which function returns the length of an object?",
+  options: ["len()", "count()", "size()", "length()"],
+  answer: "len()",
+  level: "medium"
+},
+{
+  domain: "python",
+  question: "Which keyword is used to import libraries?",
+  options: ["import", "include", "require", "using"],
+  answer: "import",
+  level: "medium"
+},
+{
+  domain: "python",
+  question: "Which keyword defines an anonymous function?",
+  options: ["lambda", "def", "func", "inline"],
+  answer: "lambda",
+  level: "medium"
+},
+{
+  domain: "python",
+  question: "Which Python data type stores key-value pairs?",
+  options: ["Dictionary", "List", "Set", "Tuple"],
+  answer: "Dictionary",
+  level: "medium"
+},
+{
+  domain: "python",
+  question: "Which keyword is used to define a class?",
+  options: ["class", "object", "def", "struct"],
+  answer: "class",
+  level: "medium"
+},
+{
+  domain: "python",
+  question: "Which concept allows a child class to use methods of parent class?",
+  options: ["Inheritance", "Encapsulation", "Polymorphism", "Abstraction"],
+  answer: "Inheritance",
+  level: "advanced"
+},
+{
+  domain: "python",
+  question: "Which function returns an iterator in Python?",
+  options: ["iter()", "next()", "map()", "filter()"],
+  answer: "iter()",
+  level: "advanced"
+},
+{
+  domain: "python",
+  question: "Which decorator is used to define a static method?",
+  options: ["@staticmethod", "@classmethod", "@property", "@static"],
+  answer: "@staticmethod",
+  level: "advanced"
+},
+{
+  domain: "python",
+  question: "Which module is used for regular expressions?",
+  options: ["re", "regex", "match", "pattern"],
+  answer: "re",
+  level: "advanced"
+},
+{
+  domain: "python",
+  question: "Which keyword is used to manage resources automatically?",
+  options: ["with", "using", "manage", "context"],
+  answer: "with",
+  level: "advanced"
+},

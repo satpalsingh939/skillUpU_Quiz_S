@@ -1,0 +1,228 @@
+// ---------------- Node.js ----------------
+{
+  domain: "nodejs",
+  question: "Which command is used to initialize a Node.js project?",
+  options: ["npm init", "node init", "npm start", "node install"],
+  answer: "npm init",
+  level: "easy"
+},
+{
+  domain: "nodejs",
+  question: "Which module is used to work with file system in Node.js?",
+  options: ["fs", "http", "path", "os"],
+  answer: "fs",
+  level: "easy"
+},
+{
+  domain: "nodejs",
+  question: "Which keyword is used to import modules in Node.js (CommonJS)?",
+  options: ["require", "import", "include", "export"],
+  answer: "require",
+  level: "easy"
+},
+{
+  domain: "nodejs",
+  question: "Which global object is used to print to console in Node.js?",
+  options: ["console", "log", "process", "stdout"],
+  answer: "console",
+  level: "easy"
+},
+{
+  domain: "nodejs",
+  question: "Which module is used to create a web server in Node.js?",
+  options: ["http", "fs", "events", "url"],
+  answer: "http",
+  level: "easy"
+},
+{
+  domain: "nodejs",
+  question: "Which function is used to handle asynchronous operations in Node.js?",
+  options: ["Callbacks", "Promises", "Async/Await", "All of the above"],
+  answer: "All of the above",
+  level: "medium"
+},
+{
+  domain: "nodejs",
+  question: "Which module is used to work with file and directory paths?",
+  options: ["path", "url", "fs", "util"],
+  answer: "path",
+  level: "medium"
+},
+{
+  domain: "nodejs",
+  question: "Which event is emitted when an error occurs in Node.js?",
+  options: ["error", "exit", "disconnect", "uncaught"],
+  answer: "error",
+  level: "medium"
+},
+{
+  domain: "nodejs",
+  question: "Which statement is true about Node.js?",
+  options: [
+    "It is single-threaded and event-driven",
+    "It is multi-threaded",
+    "It blocks I/O by default",
+    "It runs only on Linux"
+  ],
+  answer: "It is single-threaded and event-driven",
+  level: "medium"
+},
+{
+  domain: "nodejs",
+  question: "Which global object provides information about the current process?",
+  options: ["process", "console", "os", "global"],
+  answer: "process",
+  level: "medium"
+},
+{
+  domain: "nodejs",
+  question: "Which design pattern is Node.js based on?",
+  options: ["Observer", "Factory", "Reactor", "Singleton"],
+  answer: "Reactor",
+  level: "advanced"
+},
+{
+  domain: "nodejs",
+  question: "What does the 'cluster' module in Node.js do?",
+  options: [
+    "Allows running multiple Node.js processes",
+    "Manages database connections",
+    "Handles file uploads",
+    "Creates event listeners"
+  ],
+  answer: "Allows running multiple Node.js processes",
+  level: "advanced"
+},
+{
+  domain: "nodejs",
+  question: "Which method is used to resolve a promise synchronously?",
+  options: ["Promise.resolve()", "Promise.sync()", "Promise.await()", "Promise.run()"],
+  answer: "Promise.resolve()",
+  level: "advanced"
+},
+{
+  domain: "nodejs",
+  question: "Which object is used to handle unhandled exceptions?",
+  options: ["process", "error", "console", "events"],
+  answer: "process",
+  level: "advanced"
+},
+{
+  domain: "nodejs",
+  question: "Which V8 feature does Node.js use to run JavaScript?",
+  options: ["Just-In-Time Compilation", "Interpreter Only", "Ahead-of-Time Compilation", "Bytecode Execution"],
+  answer: "Just-In-Time Compilation",
+  level: "advanced"
+},
+
+// ---------------- Express.js ----------------
+{
+  domain: "expressjs",
+  question: "Which function creates an Express application?",
+  options: ["express()", "createApp()", "init()", "new Express()"],
+  answer: "express()",
+  level: "easy"
+},
+{
+  domain: "expressjs",
+  question: "Which method is used to handle GET requests?",
+  options: ["app.get()", "app.post()", "app.use()", "app.route()"],
+  answer: "app.get()",
+  level: "easy"
+},
+{
+  domain: "expressjs",
+  question: "Which middleware parses incoming JSON requests?",
+  options: ["express.json()", "express.urlencoded()", "bodyParser()", "express.static()"],
+  answer: "express.json()",
+  level: "easy"
+},
+{
+  domain: "expressjs",
+  question: "Which method is used to start an Express server?",
+  options: ["app.listen()", "app.run()", "app.start()", "app.init()"],
+  answer: "app.listen()",
+  level: "easy"
+},
+{
+  domain: "expressjs",
+  question: "Which middleware is used to serve static files?",
+  options: ["express.static()", "express.json()", "app.use()", "app.route()"],
+  answer: "express.static()",
+  level: "easy"
+},
+{
+  domain: "expressjs",
+  question: "Which object represents the HTTP request?",
+  options: ["req", "res", "next", "request"],
+  answer: "req",
+  level: "medium"
+},
+{
+  domain: "expressjs",
+  question: "Which object represents the HTTP response?",
+  options: ["res", "req", "responseObj", "context"],
+  answer: "res",
+  level: "medium"
+},
+{
+  domain: "expressjs",
+  question: "Which method is used to redirect a response?",
+  options: ["res.redirect()", "res.send()", "res.route()", "res.forward()"],
+  answer: "res.redirect()",
+  level: "medium"
+},
+{
+  domain: "expressjs",
+  question: "Which middleware handles errors?",
+  options: [
+    "A function with (err, req, res, next)",
+    "app.errorHandler()",
+    "try-catch block only",
+    "res.error()"
+  ],
+  answer: "A function with (err, req, res, next)",
+  level: "medium"
+},
+{
+  domain: "expressjs",
+  question: "Which method is used to chain multiple route handlers?",
+  options: ["app.route()", "app.use()", "app.link()", "app.all()"],
+  answer: "app.route()",
+  level: "medium"
+},
+{
+  domain: "expressjs",
+  question: "Which middleware is commonly used for authentication?",
+  options: ["passport.js", "express.json()", "helmet", "morgan"],
+  answer: "passport.js",
+  level: "advanced"
+},
+{
+  domain: "expressjs",
+  question: "Which middleware adds security headers?",
+  options: ["helmet", "cors", "morgan", "dotenv"],
+  answer: "helmet",
+  level: "advanced"
+},
+{
+  domain: "expressjs",
+  question: "Which middleware is used for logging HTTP requests?",
+  options: ["morgan", "helmet", "passport", "cookie-parser"],
+  answer: "morgan",
+  level: "advanced"
+},
+{
+  domain: "expressjs",
+  question: "Which method is used to handle all HTTP methods for a route?",
+  options: ["app.all()", "app.any()", "app.every()", "app.routeAll()"],
+  answer: "app.all()",
+  level: "advanced"
+},
+{
+  domain: "expressjs",
+  question: "Which Express feature helps in grouping routes together?",
+  options: ["Router", "Controller", "Middleware", "Service"],
+  answer: "Router",
+  level: "advanced"
+},
