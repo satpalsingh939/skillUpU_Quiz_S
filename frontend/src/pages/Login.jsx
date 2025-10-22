@@ -108,8 +108,8 @@ export default function Login({ setUser }) {
   const submit = async (e) => {
     e.preventDefault();
     try {
-      // const res = await fetch("https://skillupu-quiz-s.onrender.com/api/auth/login", {
-      const res = await fetch("http://localhost:5000/api/auth/login", {
+      const res = await fetch("https://skillupu-quiz-s.onrender.com/api/auth/login", {
+      // const res = await fetch("http://localhost:5000/api/auth/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
@@ -131,8 +131,8 @@ export default function Login({ setUser }) {
   // Step 1: Check email
   const sendFpEmail = async () => {
     try {
-      // const res = await fetch("https://skillupu-quiz-s.onrender.com/api/auth/forgot-password", {
-      const res = await fetch("http://localhost:5000/api/auth/forgot-password", {
+      const res = await fetch("https://skillupu-quiz-s.onrender.com/api/auth/forgot-password", {
+      // const res = await fetch("http://localhost:5000/api/auth/forgot-password", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: fpEmail }),
@@ -148,8 +148,8 @@ export default function Login({ setUser }) {
   // Step 2: Reset password
   const resetFpPassword = async () => {
     try {
-      // const res = await fetch("https://skillupu-quiz-s.onrender.com/api/auth/reset-password", {
-      const res = await fetch("http://localhost:5000/api/auth/reset-password", {
+      const res = await fetch("https://skillupu-quiz-s.onrender.com/api/auth/reset-password", {
+      // const res = await fetch("http://localhost:5000/api/auth/reset-password", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: fpEmail, newPassword: fpNewPassword }),
