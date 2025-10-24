@@ -23,13 +23,25 @@ router.post("/send-otp", async (req, res) => {
 
     otpStore[email] = { otp, expires };
 
+    // const transporter = nodemailer.createTransport({
+    //   service: "gmail",
+    //   auth: {
+    //     user: process.env.EMAIL_USER,
+    //     pass: process.env.EMAIL_PASS,
+    //   },
+    // });
     const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.EMAIL_USER,
-        pass: process.env.EMAIL_PASS,
-      },
-    });
+  host: "smtp.gmail.com",
+  port: 587,
+  secure: false, // true for 465
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS, // App Password
+  },
+  tls: {
+    rejectUnauthorized: false, // optional, in case SSL issues
+  },
+});
 
     await transporter.sendMail({
       from: `"SkillUpU" <${process.env.EMAIL_USER}>`,
