@@ -6,68 +6,68 @@ const nodemailer = require('nodemailer');
 const User = require('../models/User');
 const JWT_SECRET = process.env.JWT_SECRET;
 
-const { Resend } = require("resend");
+// const { Resend } = require("resend");
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+// const resend = new Resend(process.env.RESEND_API_KEY);
 
 
 const otpStore = {};
 
 router.post("/send-otp", async (req, res) => {
-  // try {
-  //   const { email } = req.body;
-  //   if (!email) return res.status(400).json({ msg: "Email is required" });
-
-  //   const otp = Math.floor(100000 + Math.random() * 900000).toString();
-  //   const expires = Date.now() + 5 * 60 * 1000; 
-
-  //   otpStore[email] = { otp, expires };
-
-  //   const transporter = nodemailer.createTransport({
-  //     service: "gmail",
-  //     auth: {
-  //       user: process.env.EMAIL_USER,
-  //       pass: process.env.EMAIL_PASS,
-  //     },
-  //   });
-
-  //   await transporter.sendMail({
-  //     from: `"SkillUpU" <${process.env.EMAIL_USER}>`,
-  //     to: email,
-  //     subject: "SkillUpU - OTP Verification",
-  //     text: `Your OTP is ${otp}. It will expire in 5 minutes.`,
-  //   });
-
-  //   res.json({ msg: "OTP sent successfully to your email" });
-  // } catch (err) {
-  //   console.error(err);
-  //   res.status(500).json({ msg: "Failed to send OTP" });
-  // }
-
-   try {
+  try {
     const { email } = req.body;
     if (!email) return res.status(400).json({ msg: "Email is required" });
 
-    // Generate OTP
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
-    const expires = Date.now() + 5 * 60 * 1000; // 5 min expiry
+    const expires = Date.now() + 5 * 60 * 1000; 
+
     otpStore[email] = { otp, expires };
 
-    // Send OTP via Resend API
-    await resend.emails.send({
-       from: `"SkillUpU" <${process.env.EMAIL_USER}>`,
-       // from: "satpalsinghjadhav5@gmail.com",
-      // to: email,
-      to: "satpalsinghjadhav5@gmail.com",
+    const transporter = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
+      },
+    });
+
+    await transporter.sendMail({
+      from: `"SkillUpU" <${process.env.EMAIL_USER}>`,
+      to: email,
       subject: "SkillUpU - OTP Verification",
       text: `Your OTP is ${otp}. It will expire in 5 minutes.`,
     });
 
-    return res.json({ msg: "OTP sent successfully to your email" });
+    res.json({ msg: "OTP sent successfully to your email" });
   } catch (err) {
-    console.error("Send OTP Error:", err);
-    return res.status(500).json({ msg: "Failed to send OTP", error: err.message });
+    console.error(err);
+    res.status(500).json({ msg: "Failed to send OTP" });
   }
+
+  //  try {
+  //   const { email } = req.body;
+  //   if (!email) return res.status(400).json({ msg: "Email is required" });
+
+  //   // Generate OTP
+  //   const otp = Math.floor(100000 + Math.random() * 900000).toString();
+  //   const expires = Date.now() + 5 * 60 * 1000; // 5 min expiry
+  //   otpStore[email] = { otp, expires };
+
+  //   // Send OTP via Resend API
+  //   await resend.emails.send({
+  //      from: `"SkillUpU" <${process.env.EMAIL_USER}>`,
+  //      // from: "satpalsinghjadhav5@gmail.com",
+  //     // to: email,
+  //     to: "satpalsinghjadhav5@gmail.com",
+  //     subject: "SkillUpU - OTP Verification",
+  //     text: `Your OTP is ${otp}. It will expire in 5 minutes.`,
+  //   });
+
+  //   return res.json({ msg: "OTP sent successfully to your email" });
+  // } catch (err) {
+  //   console.error("Send OTP Error:", err);
+  //   return res.status(500).json({ msg: "Failed to send OTP", error: err.message });
+  // }
 });
 
 // Register
