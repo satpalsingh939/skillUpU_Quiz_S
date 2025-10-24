@@ -57,7 +57,8 @@ router.post("/send-otp", async (req, res) => {
     await resend.emails.send({
        from: `"SkillUpU" <${process.env.EMAIL_USER}>`,
        // from: "satpalsinghjadhav5@gmail.com",
-      to: email,
+      // to: email,
+      to: "satpalsinghjadhav5@gmail.com",
       subject: "SkillUpU - OTP Verification",
       text: `Your OTP is ${otp}. It will expire in 5 minutes.`,
     });
