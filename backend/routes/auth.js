@@ -2,137 +2,137 @@ const express = require('express');
 const router = express.Router();
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const nodemailer = require('nodemailer');
 const User = require('../models/User');
 const JWT_SECRET = process.env.JWT_SECRET;
 
+const nodemailer = require('nodemailer');
 // const { Resend } = require("resend");
 
 // const resend = new Resend(process.env.RESEND_API_KEY);
 
 
-const otpStore = {};
+// const otpStore = {};
 
-router.post("/send-otp", async (req, res) => {
-  try {
-    const { email } = req.body;
-    if (!email) return res.status(400).json({ msg: "Email is required" });
-
-    const otp = Math.floor(100000 + Math.random() * 900000).toString();
-    const expires = Date.now() + 5 * 60 * 1000; 
-
-    otpStore[email] = { otp, expires };
-
-    // const transporter = nodemailer.createTransport({
-    //   service: "gmail",
-    //   auth: {
-    //     user: process.env.EMAIL_USER,
-    //     pass: process.env.EMAIL_PASS,
-    //   },
-    // });
-    const transporter = nodemailer.createTransport({
-  host: "smtp.gmail.com",
-  port: 587,
-  secure: false, // true for 465
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS, // App Password
-  },
-  tls: {
-    rejectUnauthorized: false, // optional, in case SSL issues
-  },
-});
-
-    await transporter.sendMail({
-      from: `"SkillUpU" <${process.env.EMAIL_USER}>`,
-      to: email,
-      subject: "SkillUpU - OTP Verification",
-      text: `Your OTP is ${otp}. It will expire in 5 minutes.`,
-    });
-
-    res.json({ msg: "OTP sent successfully to your email" });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ msg: "Failed to send OTP" });
-  }
-
-  //  try {
-  //   const { email } = req.body;
-  //   if (!email) return res.status(400).json({ msg: "Email is required" });
-
-  //   // Generate OTP
-  //   const otp = Math.floor(100000 + Math.random() * 900000).toString();
-  //   const expires = Date.now() + 5 * 60 * 1000; // 5 min expiry
-  //   otpStore[email] = { otp, expires };
-
-  //   // Send OTP via Resend API
-  //   await resend.emails.send({
-  //      from: `"SkillUpU" <${process.env.EMAIL_USER}>`,
-  //      // from: "satpalsinghjadhav5@gmail.com",
-  //     // to: email,
-  //     to: "satpalsinghjadhav5@gmail.com",
-  //     subject: "SkillUpU - OTP Verification",
-  //     text: `Your OTP is ${otp}. It will expire in 5 minutes.`,
-  //   });
-
-  //   return res.json({ msg: "OTP sent successfully to your email" });
-  // } catch (err) {
-  //   console.error("Send OTP Error:", err);
-  //   return res.status(500).json({ msg: "Failed to send OTP", error: err.message });
-  // }
-});
-
-// Register
-// router.post('/register', async (req, res) => {
+// router.post("/send-otp", async (req, res) => {
 //   try {
-//     const { name, email, password } = req.body;
-//     if (!name || !email || !password) return res.status(400).json({ msg: 'Provide all fields' });
-//     let user = await User.findOne({ email });
-//     if (user) return res.status(400).json({ msg: 'User exists' });
-//     const salt = await bcrypt.genSalt(10);
-//     const hash = await bcrypt.hash(password, salt);
-//     user = new User({ name, email, password: hash });
-//     await user.save();
-//     const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: '7d' });
-//     res.json({ token, user: { id: user._id, name: user.name, email: user.email } });
-//   } catch (err) { console.error(err); res.status(500).json({ msg: 'Server error' }); }
+//     const { email } = req.body;
+//     if (!email) return res.status(400).json({ msg: "Email is required" });
+
+//     const otp = Math.floor(100000 + Math.random() * 900000).toString();
+//     const expires = Date.now() + 5 * 60 * 1000; 
+
+//     otpStore[email] = { otp, expires };
+
+//     // const transporter = nodemailer.createTransport({
+//     //   service: "gmail",
+//     //   auth: {
+//     //     user: process.env.EMAIL_USER,
+//     //     pass: process.env.EMAIL_PASS,
+//     //   },
+//     // });
+//     const transporter = nodemailer.createTransport({
+//   host: "smtp.gmail.com",
+//   port: 587,
+//   secure: false, // true for 465
+//   auth: {
+//     user: process.env.EMAIL_USER,
+//     pass: process.env.EMAIL_PASS, // App Password
+//   },
+//   tls: {
+//     rejectUnauthorized: false, // optional, in case SSL issues
+//   },
 // });
 
-router.post("/register-otp", async (req, res) => {
+//     await transporter.sendMail({
+//       from: `"SkillUpU" <${process.env.EMAIL_USER}>`,
+//       to: email,
+//       subject: "SkillUpU - OTP Verification",
+//       text: `Your OTP is ${otp}. It will expire in 5 minutes.`,
+//     });
+
+//     res.json({ msg: "OTP sent successfully to your email" });
+//   } catch (err) {
+//     console.error(err);
+//     res.status(500).json({ msg: "Failed to send OTP" });
+//   }
+
+//   //  try {
+//   //   const { email } = req.body;
+//   //   if (!email) return res.status(400).json({ msg: "Email is required" });
+
+//   //   // Generate OTP
+//   //   const otp = Math.floor(100000 + Math.random() * 900000).toString();
+//   //   const expires = Date.now() + 5 * 60 * 1000; // 5 min expiry
+//   //   otpStore[email] = { otp, expires };
+
+//   //   // Send OTP via Resend API
+//   //   await resend.emails.send({
+//   //      from: `"SkillUpU" <${process.env.EMAIL_USER}>`,
+//   //      // from: "satpalsinghjadhav5@gmail.com",
+//   //     // to: email,
+//   //     to: "satpalsinghjadhav5@gmail.com",
+//   //     subject: "SkillUpU - OTP Verification",
+//   //     text: `Your OTP is ${otp}. It will expire in 5 minutes.`,
+//   //   });
+
+//   //   return res.json({ msg: "OTP sent successfully to your email" });
+//   // } catch (err) {
+//   //   console.error("Send OTP Error:", err);
+//   //   return res.status(500).json({ msg: "Failed to send OTP", error: err.message });
+//   // }
+// });
+
+// Register
+router.post('/register', async (req, res) => {
   try {
-    const { name, email, password, otp } = req.body;
-
-    if (!name || !email || !password || !otp)
-      return res.status(400).json({ msg: "All fields are required" });
-
-    const record = otpStore[email];
-    if (!record) return res.status(400).json({ msg: "OTP not sent" });
-    if (record.expires < Date.now())
-      return res.status(400).json({ msg: "OTP expired" });
-    if (record.otp !== otp)
-      return res.status(400).json({ msg: "Invalid OTP" });
-
+    const { name, email, password } = req.body;
+    if (!name || !email || !password) return res.status(400).json({ msg: 'Provide all fields' });
     let user = await User.findOne({ email });
-    if (user) return res.status(400).json({ msg: "User already exists" });
-
+    if (user) return res.status(400).json({ msg: 'User exists' });
     const salt = await bcrypt.genSalt(10);
     const hash = await bcrypt.hash(password, salt);
     user = new User({ name, email, password: hash });
     await user.save();
-
-    delete otpStore[email]; 
-
-    const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: "7d" });
-
-    res.json({
-      token,
-      user: { id: user._id, name: user.name, email: user.email },
-    });
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ msg: "Server error" });
-  }
+    const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: '7d' });
+    res.json({ token, user: { id: user._id, name: user.name, email: user.email } });
+  } catch (err) { console.error(err); res.status(500).json({ msg: 'Server error' }); }
 });
+
+// router.post("/register-otp", async (req, res) => {
+//   try {
+//     const { name, email, password, otp } = req.body;
+
+//     if (!name || !email || !password || !otp)
+//       return res.status(400).json({ msg: "All fields are required" });
+
+//     const record = otpStore[email];
+//     if (!record) return res.status(400).json({ msg: "OTP not sent" });
+//     if (record.expires < Date.now())
+//       return res.status(400).json({ msg: "OTP expired" });
+//     if (record.otp !== otp)
+//       return res.status(400).json({ msg: "Invalid OTP" });
+
+//     let user = await User.findOne({ email });
+//     if (user) return res.status(400).json({ msg: "User already exists" });
+
+//     const salt = await bcrypt.genSalt(10);
+//     const hash = await bcrypt.hash(password, salt);
+//     user = new User({ name, email, password: hash });
+//     await user.save();
+
+//     delete otpStore[email]; 
+
+//     const token = jwt.sign({ id: user._id }, JWT_SECRET, { expiresIn: "7d" });
+
+//     res.json({
+//       token,
+//       user: { id: user._id, name: user.name, email: user.email },
+//     });
+//   } catch (err) {
+//     console.error(err);
+//     res.status(500).json({ msg: "Server error" });
+//   }
+// });
 
 
 
